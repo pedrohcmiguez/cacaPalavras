@@ -1,0 +1,69 @@
+# Project: Jogo
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = carrega_nomes.o gera_char.o gera_num_1.o gera_num_2.o gera_tabela.o le_nivel.o le_op.o mistura_tabela.o mostra_tabela.o main.o regras.o inicio.o Jogo.o maiuscula.o $(RES)
+LINKOBJ  = carrega_nomes.o gera_char.o gera_num_1.o gera_num_2.o gera_tabela.o le_nivel.o le_op.o mistura_tabela.o mostra_tabela.o main.o regras.o inicio.o Jogo.o maiuscula.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Jogo.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Jogo.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Jogo.exe" $(LIBS)
+
+carrega_nomes.o: carrega_nomes.c
+	$(CC) -c carrega_nomes.c -o carrega_nomes.o $(CFLAGS)
+
+gera_char.o: gera_char.c
+	$(CC) -c gera_char.c -o gera_char.o $(CFLAGS)
+
+gera_num_1.o: gera_num_1.c
+	$(CC) -c gera_num_1.c -o gera_num_1.o $(CFLAGS)
+
+gera_num_2.o: gera_num_2.c
+	$(CC) -c gera_num_2.c -o gera_num_2.o $(CFLAGS)
+
+gera_tabela.o: gera_tabela.c
+	$(CC) -c gera_tabela.c -o gera_tabela.o $(CFLAGS)
+
+le_nivel.o: le_nivel.c
+	$(CC) -c le_nivel.c -o le_nivel.o $(CFLAGS)
+
+le_op.o: le_op.c
+	$(CC) -c le_op.c -o le_op.o $(CFLAGS)
+
+mistura_tabela.o: mistura_tabela.c
+	$(CC) -c mistura_tabela.c -o mistura_tabela.o $(CFLAGS)
+
+mostra_tabela.o: mostra_tabela.c
+	$(CC) -c mostra_tabela.c -o mostra_tabela.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+regras.o: regras.c
+	$(CC) -c regras.c -o regras.o $(CFLAGS)
+
+inicio.o: inicio.c
+	$(CC) -c inicio.c -o inicio.o $(CFLAGS)
+
+Jogo.o: Jogo.c
+	$(CC) -c Jogo.c -o Jogo.o $(CFLAGS)
+
+maiuscula.o: maiuscula.c
+	$(CC) -c maiuscula.c -o maiuscula.o $(CFLAGS)
