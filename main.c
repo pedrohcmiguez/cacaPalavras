@@ -4,19 +4,19 @@
 #include <conio.h>
 
 
-char le_op(); //Lê a opção do usuario sobre um tema para o jogo;
-char le_nivel(); //Lê o nivel de dificuldade do Jogo;
+char le_op(); //Lï¿½ a opï¿½ï¿½o do usuario sobre um tema para o jogo;
+char le_nivel(); //Lï¿½ o nivel de dificuldade do Jogo;
 void regras(); //Mostra as regras do jogo;
-int  gera_char(); //Função para gerar um numero aleatorio entre 97 e 122 para ser usado na matriz de caracters;
+int  gera_char(); //Funï¿½ï¿½o para gerar um numero aleatorio entre 97 e 122 para ser usado na matriz de caracters;
 void gera_tabela(int LIN, int COL); //Gera a tabela com todas as p
 void carrega_nomes(char op); //Carrega todos os nomes do arquivo escolhido numa matriz de caracter;
-void mostra_tabela(int LIN, int COL); //Função para mostrar na tela a tabela com as letras sorteadas e os nomes do jogo
-void mistura_tabela(int LIN, int COL); //Função para inserir os nomes na tabela que foi gerada com as letras aleatorias
-int  _gera1(); //Função para sortear um numero para selecionar uma palavra aleatoriamente
-int  _gera2(int COL); //Função para gerar um numero aleatorio para usar na posição COLUNA de cada palavra na tabela geral.
-void jogo(int LIN, int COL); //Função para ler do usuario as informações da palavra que esta na tabela
-void maiuscula(int x, int y); //Função para colocar uma palavra em Maiusculo caso o usuario acerte!
-void inicio(); //Função para apresentações iniciais
+void mostra_tabela(int LIN, int COL); //Funï¿½ï¿½o para mostrar na tela a tabela com as letras sorteadas e os nomes do jogo
+void mistura_tabela(int LIN, int COL); //Funï¿½ï¿½o para inserir os nomes na tabela que foi gerada com as letras aleatorias
+int  _gera1(); //Funï¿½ï¿½o para sortear um numero para selecionar uma palavra aleatoriamente
+int  _gera2(int COL); //Funï¿½ï¿½o para gerar um numero aleatorio para usar na posiï¿½ï¿½o COLUNA de cada palavra na tabela geral.
+void jogo(int LIN, int COL); //Funï¿½ï¿½o para ler do usuario as informaï¿½ï¿½es da palavra que esta na tabela
+void maiuscula(int x, int y); //Funï¿½ï¿½o para colocar uma palavra em Maiusculo caso o usuario acerte!
+void inicio(); //Funï¿½ï¿½o para apresentaï¿½ï¿½es iniciais
 
 
 int tabela[20][25], pos[20], troca[20];
@@ -90,6 +90,14 @@ int main()
                  jogo(LIN, COL);
             }
             else if(op=='t')
+            {
+                 carrega_nomes(op);
+                 gera_tabela(LIN, COL);
+                 mistura_tabela(LIN, COL);
+                 mostra_tabela(LIN, COL);
+                 jogo(LIN, COL);
+            }
+            else if(op=='c')
             {
                  carrega_nomes(op);
                  gera_tabela(LIN, COL);

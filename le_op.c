@@ -13,7 +13,7 @@ char le_op()
      char op;
      printf("\n\n\n\n\n");
      printf("\t\tEscolha sobre que assunto voc%c quer jogar.\n", 136);
-     printf("\n\t\t\t[A]Animais\n\t\t\t[F]Frutas\n\t\t\t[N]Nome de Pessoas\n\t\t\t[T]Times de Futebol\n\t\t\t");
+     printf("\n\t\t\t[A]Animais\n\t\t\t[F]Frutas\n\t\t\t[N]Nome de Pessoas\n\t\t\t[C]Nome de Carros\n\t\t\t[T]Times de Futebol\n\t\t\t");
      printf("[P]Todos os assuntos juntos\n\t\t\t[R]Regras\n\t\t\t[S]Sair\n\n");
      fflush(stdin);
      op = getch();
@@ -22,7 +22,7 @@ char le_op()
                          system("cls");
                          printf("\n\n\n\n\n");
                          printf("\t\tErro!!! Digite a op%c%co novamente!\n\a\a", 135, 134);
-                         printf("\n\t\t\t[A]Animais\n\t\t\t[F]Frutas\n\t\t\t[N]Nome de Pessoas\n\t\t\t[T]Times de Futebol\n\t\t\t");
+                         printf("\n\t\t\t[A]Animais\n\t\t\t[F]Frutas\n\t\t\t[N]Nome de Pessoas\n\t\t\t[C]Nome de Carros\n\t\t\t[T]Times de Futebol\n\t\t\t");
                          printf("[P]Todos os assuntos juntos\n\t\t\t[R]Regras\n\t\t\t[S]Sair\n\n");
                          fflush(stdin);
                          op = getch();

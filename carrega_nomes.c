@@ -16,6 +16,7 @@ void carrega_nomes(char op)
      else if(op=='f') fp = fopen("frutas.txt", "r");
      else if(op=='n') fp = fopen("nome.txt", "r");
      else if(op=='t') fp = fopen("times.txt", "r");
+     else if(op=='c') fp = fopen("carros.txt", "r");
      else if(op=='p') fp = fopen("tudo.txt", "r");
      else
      {
